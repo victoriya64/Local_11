@@ -1,0 +1,74 @@
+﻿<Window x:Class="moodtracker.Windows.StatisticWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:moodtracker.Windows"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Top="0"
+        Left="0"
+        Title="StatisticWindow" Height="500" Width="500">
+
+    <Border CornerRadius="40" Background="#cfd5e5" Width="500" Height="500" BorderThickness="3" BorderBrush="#cfd5e5" Padding="10">
+        <Border CornerRadius="40">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#fefefe" Offset="0"/>
+                    <GradientStop Color="#ededef" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid Margin="0 0 0 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"  Text="Счётчик настроения" Margin="0 10 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"  Style="{StaticResource titleTextNotes}"></TextBlock>
+                <lvc:PieChart Grid.Row="1" StartingRotationAngle="-90" Width="200" Height="200" LegendLocation="None" InnerRadius="60" Margin="0 0 0 0">
+                    <lvc:PieChart.Series>
+                        <lvc:PieSeries x:Name="RadP" Title="Rad" Values="{Binding}" DataLabels = "true" Fill="#DFC19E"/>
+                        <lvc:PieSeries x:Name="GoodP" Title="Good" Values="{Binding}" DataLabels = "true" Fill="#93bb8d"/>
+                        <lvc:PieSeries x:Name="NeutralP" Title="Neutral" Values="{Binding}" DataLabels = "true" Fill="#b494c0"/>
+                        <lvc:PieSeries x:Name="BadP" Title="Bad" Values="{Binding}" DataLabels = "true" Fill="#8f9fbf"/>
+                        <lvc:PieSeries x:Name="AwfulP" Title="Awful" Values="{Binding}" DataLabels = "true" Fill="#8C8C8C"/>
+                    </lvc:PieChart.Series>
+                </lvc:PieChart>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="/Image/rad.png" Width="50" Height="50" Margin="0 0 0 0"/>
+                    <Ellipse Grid.Column="0" Stroke="#c0843e" Width="30" Height="30" Fill="White" Margin="45 0 0 45"/>
+                    <TextBlock x:Name="Rad" Grid.Column="0" Text="{Binding}" Margin="66 9 0 0" Foreground="#c0843e"/>
+                    <Image Grid.Column="1" Source="/Image/good.png" Width="50" Height="50" />
+                    <Ellipse Grid.Column="1" Stroke="#28771c" Width="30" Height="30" Fill="White" Margin="40 0 0 45"/>
+                    <TextBlock x:Name="Good" Grid.Column="1" Text="{Binding}" Margin="66 9 0 0" Foreground="#28771c"/>
+                    <Image Grid.Column="2" Source="/Image/neutral.png" Width="50" Height="50" />
+                    <Ellipse Grid.Column="2" Stroke="#692981" Width="30" Height="30" Fill="White" Margin="40 0 0 45"/>
+                    <TextBlock x:Name="Neutral" Grid.Column="2" Text="{Binding}" Margin="66 9 0 0" Foreground="#692981"/>
+                    <Image Grid.Column="3" Source="/Image/bad.png" Width="50" Height="50" />
+                    <Ellipse Grid.Column="3" Stroke="#203f81" Width="30" Height="30" Fill="White" Margin="40 0 0 45"/>
+                    <TextBlock x:Name="Bad" Grid.Column="3" Text="{Binding}" Margin="66 9 0 0" Foreground="#203f81"/>
+                    <Image Grid.Column="4" Source="/Image/awful.png" Width="50" Height="50" />
+                    <Ellipse Grid.Column="4" Stroke="#1a1a1a" Width="30" Height="30" Fill="White" Margin="40 0 0 45"/>
+                    <TextBlock x:Name="Awful" Grid.Column="4" Text="{Binding}" Margin="66 9 0 0" Foreground="#1a1a1a"/>
+                </Grid>
+                <Button Grid.Row="3" Style="{StaticResource bottomMenuButton}" Height="45" Width="45" HorizontalAlignment="Left" Margin="20 0 0 30" Click="Close_Button">
+                    <fa:IconImage Icon="Close" Style="{StaticResource menuButtonIcon}"/>
+                </Button>
+            </Grid>
+        </Border>
+    </Border>
+</Window>
