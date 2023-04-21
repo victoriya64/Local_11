@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <department id="001">
+    <boss>John Doe</boss>
+    <workers>
+      <worker name="Jane Smith">
+        <specialization>programmer</specialization>
+      </worker>
+    </workers>
+  </department>
+  <department id="002">
+    <boss>Jim Malfoy</boss>
+    <workers>
+      <worker name="Michael Brown">
+        <specialization>tester</specialization>
+      </worker>
+    </workers>
+  </department>
+</catalog>

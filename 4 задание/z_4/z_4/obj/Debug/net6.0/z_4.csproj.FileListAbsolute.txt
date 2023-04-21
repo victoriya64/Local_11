@@ -1,0 +1,15 @@
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\bin\Debug\net6.0\z_4.exe
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\bin\Debug\net6.0\z_4.deps.json
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\bin\Debug\net6.0\z_4.runtimeconfig.json
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\bin\Debug\net6.0\z_4.dll
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\bin\Debug\net6.0\z_4.pdb
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.csproj.AssemblyReference.cache
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.AssemblyInfoInputs.cache
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.AssemblyInfo.cs
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.csproj.CoreCompileInputs.cache
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.dll
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\refint\z_4.dll
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.pdb
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\z_4.genruntimeconfig.cache
+C:\Users\Виктория\Documents\конструирование\4 задание\z_4\z_4\obj\Debug\net6.0\ref\z_4.dll
