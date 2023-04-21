@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "tMw9+i/sC4lVTxJ+IspWzk4fu1I1X6pxGOySW2pcMr1HCDt78o/z2UGPpaGBzDASbBkbDEiBG5SlaCxMr9dcYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Виктория\\Documents\\конструирование\\5 задание\\z_5\\z_5\\z_5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Виктория\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Виктория\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Виктория\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Виктория\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
