@@ -1,0 +1,8 @@
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\bin\Debug\z5.exe.config
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\bin\Debug\z5.exe
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\bin\Debug\z5.pdb
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\obj\Debug\z5.csproj.AssemblyReference.cache
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\obj\Debug\z5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\obj\Debug\z5.csproj.CoreCompileInputs.cache
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\obj\Debug\z5.exe
+C:\Users\Виктория\Documents\конструирование\5 задание\z5\z5\obj\Debug\z5.pdb
