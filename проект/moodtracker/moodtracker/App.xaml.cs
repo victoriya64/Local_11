@@ -13,13 +13,11 @@ namespace moodtracker
     /// </summary>
     public partial class App : Application
     {
-        internal static Repositories.RepositoryBase db;
-        internal static string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
-        internal static string selectedDate = DateTime.Now.ToString("yyyy-MM-dd  hh:mm");
+        public static Repositories.RepositoryBase dao;
 
         public App()
         {
-            db = new Repositories.RepositoryBase();
+            dao = new Repositories.RepositoryBase();
         }
     }
 }

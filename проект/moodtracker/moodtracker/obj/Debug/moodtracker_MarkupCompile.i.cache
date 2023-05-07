@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Виктория\Documents\конструирование\проект\moodtracker\moodtracker\App.xaml
-4-1985439012
+4-1093232232
 
-13806849714
-31-682818784
-Windows\MainWindow.xaml;Windows\NewDayWindow.xaml;Windows\StatisticWindow.xaml;Windows\WindowBase.xaml;
+19602083169
+27930716926
+View\HistoryView.xaml;View\MainView.xaml;View\NotesView.xaml;View\StatisticView.xaml;
 
-True
+False
 

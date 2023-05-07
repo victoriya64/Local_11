@@ -4,34 +4,8 @@
              xmlns:local="clr-namespace:moodtracker"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             StartupUri="Windows\MainWindow.xaml">
+             StartupUri="View\MainView.xaml">
     <Application.Resources>
-        <Style x:Key="menuButton" TargetType="RadioButton">
-            <Setter Property="Background"  Value="#7163ba"/>
-            <Setter Property="Height"  Value="200"/>
-            <Setter Property="Width"  Value="120"/>
-            <Setter Property="Foreground"  Value="White"/>
-            <Setter Property="Margin"  Value="0 5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="RadioButton">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="15">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#5a5080"/>
-                </Trigger>
-                <Trigger Property="IsChecked" Value="True">
-                    <Setter Property="Background" Value="#5a5080"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
         <Style x:Key="bottomMenuButton" TargetType="Button">
             <Setter Property="Background"  Value="#7163ba"/>
             <Setter Property="Height"  Value="50"/>
@@ -56,10 +30,144 @@
             </Style.Triggers>
         </Style>
 
-        <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
-            <Setter Property="Foreground"  Value="White"/>
-            <Setter Property="Width"  Value="17"/>
-            <Setter Property="Height"  Value="17"/>
+        <Style x:Key="ellipse" TargetType="Ellipse">
+            <Setter Property="Width"  Value="30"/>
+            <Setter Property="Height"  Value="30"/>
+            <Setter Property="Fill"  Value="White"/>
+            <Setter Property="Margin"  Value="40 0 0 45"/>
+        </Style>
+
+        <Style x:Key="textblock" TargetType="TextBlock">
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="Margin"  Value="88 20 0 0"/>
+        </Style>
+
+        <Style x:Key="textblockRad" TargetType="TextBlock" BasedOn="{StaticResource textblock}">
+            <Setter Property="Foreground"  Value="#c0843e"/>
+        </Style>
+
+        <Style x:Key="textblockGood" TargetType="TextBlock" BasedOn="{StaticResource textblock}">
+            <Setter Property="Foreground"  Value="#28771c"/>
+        </Style>
+
+        <Style x:Key="textblockNeutral" TargetType="TextBlock" BasedOn="{StaticResource textblock}">
+            <Setter Property="Foreground"  Value="#692981"/>
+        </Style>
+
+        <Style x:Key="textblockBad" TargetType="TextBlock" BasedOn="{StaticResource textblock}">
+            <Setter Property="Foreground"  Value="#203f81"/>
+        </Style>
+
+        <Style x:Key="textblockAwful" TargetType="TextBlock" BasedOn="{StaticResource textblock}">
+            <Setter Property="Foreground"  Value="#1a1a1a"/>
+        </Style>
+
+        <Style x:Key="ellipseRad" TargetType="Ellipse" BasedOn="{StaticResource ellipse}">
+            <Setter Property="Stroke"  Value="#c0843e"/>
+        </Style>
+
+        <Style x:Key="ellipseGood" TargetType="Ellipse" BasedOn="{StaticResource ellipse}">
+            <Setter Property="Stroke"  Value="#28771c"/>
+        </Style>
+
+        <Style x:Key="ellipseNeutral" TargetType="Ellipse" BasedOn="{StaticResource ellipse}">
+            <Setter Property="Stroke"  Value="#692981"/>
+        </Style>
+
+        <Style x:Key="ellipseBad" TargetType="Ellipse" BasedOn="{StaticResource ellipse}">
+            <Setter Property="Stroke"  Value="#203f81"/>
+        </Style>
+
+        <Style x:Key="ellipseAwful" TargetType="Ellipse" BasedOn="{StaticResource ellipse}">
+            <Setter Property="Stroke"  Value="#1a1a1a"/>
+        </Style>
+
+        <Style x:Key="image" TargetType="Image">
+            <Setter Property="Width"  Value="60"/>
+            <Setter Property="Height"  Value="60"/>
+        </Style>
+
+        <Style x:Key="imageRad" TargetType="Image" BasedOn="{StaticResource image}">
+            <Setter Property="Source"  Value="/Image/rad.png"/>
+        </Style>
+
+        <Style x:Key="imageGood" TargetType="Image" BasedOn="{StaticResource image}">
+            <Setter Property="Source"  Value="/Image/good.png"/>
+        </Style>
+
+        <Style x:Key="imageNeutral" TargetType="Image" BasedOn="{StaticResource image}">
+            <Setter Property="Source"  Value="/Image/neutral.png"/>
+        </Style>
+
+        <Style x:Key="imageBad" TargetType="Image" BasedOn="{StaticResource image}">
+            <Setter Property="Source"  Value="/Image/bad.png"/>
+        </Style>
+
+        <Style x:Key="imageAwful" TargetType="Image" BasedOn="{StaticResource image}">
+            <Setter Property="Source"  Value="/Image/awful.png"/>
+        </Style>
+
+        <Style x:Key="Limage" TargetType="Image">
+            <Setter Property="Width"  Value="30"/>
+            <Setter Property="Height"  Value="30"/>
+        </Style>
+
+        <Style x:Key="LimageRadL" TargetType="Image" BasedOn="{StaticResource Limage}">
+            <Setter Property="Source"  Value="/Image/rad.png"/>
+        </Style>
+
+        <Style x:Key="LimageGoodL" TargetType="Image" BasedOn="{StaticResource Limage}">
+            <Setter Property="Source"  Value="/Image/good.png"/>
+        </Style>
+
+        <Style x:Key="LimageNeutralL" TargetType="Image" BasedOn="{StaticResource Limage}">
+            <Setter Property="Source"  Value="/Image/neutral.png"/>
+        </Style>
+
+        <Style x:Key="LimageBadL" TargetType="Image" BasedOn="{StaticResource Limage}">
+            <Setter Property="Source"  Value="/Image/bad.png"/>
+        </Style>
+
+        <Style x:Key="LimageAwfulL" TargetType="Image" BasedOn="{StaticResource Limage}">
+            <Setter Property="Source"  Value="/Image/awful.png"/>
+        </Style>
+
+        <Style x:Key="pieChart" TargetType="lvc:PieChart">
+            <Setter Property="StartingRotationAngle"  Value="-90"/>
+            <Setter Property="Width"  Value="200"/>
+            <Setter Property="Height"  Value="200"/>
+            <Setter Property="LegendLocation"  Value="None"/>
+            <Setter Property="InnerRadius"  Value="60"/>
+        </Style>
+
+        <Style x:Key="chartLines" TargetType="lvc:PieSeries">
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="DataLabels"  Value="True"/>
+        </Style>
+
+        <Style x:Key="chartLinesRad" TargetType="lvc:PieSeries" BasedOn="{StaticResource chartLines}">
+            <Setter Property="Title"  Value="Rad"/>
+            <Setter Property="Fill"  Value="#DFC19E"/>
+        </Style>
+
+        <Style x:Key="chartLinesGood" TargetType="lvc:PieSeries" BasedOn="{StaticResource chartLines}">
+            <Setter Property="Title"  Value="Good"/>
+            <Setter Property="Fill"  Value="#93bb8d"/>
+        </Style>
+
+        <Style x:Key="chartLinesNeutral" TargetType="lvc:PieSeries" BasedOn="{StaticResource chartLines}">
+            <Setter Property="Title"  Value="Neutral"/>
+            <Setter Property="Fill"  Value="#b494c0"/>
+        </Style>
+
+        <Style x:Key="chartLinesBad" TargetType="lvc:PieSeries" BasedOn="{StaticResource chartLines}">
+            <Setter Property="Title"  Value="Bad"/>
+            <Setter Property="Fill"  Value="#8f9fbf"/>
+        </Style>
+
+        <Style x:Key="chartLinesAwful" TargetType="lvc:PieSeries" BasedOn="{StaticResource chartLines}">
+            <Setter Property="Title"  Value="Awful"/>
+            <Setter Property="Fill"  Value="#8C8C8C"/>
         </Style>
 
         <Style x:Key="topMenuButton" TargetType="Button">
@@ -84,25 +192,45 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-
-        <Style x:Key="titleTextMenu" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="26"/>
+        <Style x:Key="titleTextHistory" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#594e7f"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
             <Setter Property="FontWeight" Value="18"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
-
         <Style x:Key="titleTextNotes" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#594e7f"/>
             <Setter Property="FontSize" Value="30"/>
             <Setter Property="FontWeight" Value="18"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <Style x:Key="titleDataNotes" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#594e7f"/>
             <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="20"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="titleDataHistory" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#594e7f"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="FontWeight" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="titleNoteHistory" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#594e7f"/>
+            <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="18"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
@@ -110,6 +238,7 @@
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontWeight" Value="18"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
             <Setter Property="Height" Value="80"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Margin" Value="40 0 40 0"/>
@@ -122,7 +251,8 @@
         </Style>
         <Style x:Key="moodButton" TargetType="RadioButton">
             <Setter Property="Background"  Value="Transparent"/>
-            <Setter Property="Height"  Value="50"/>
+            <Setter Property="Height"  Value="80"/>
+            <Setter Property="Width"  Value="80"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
@@ -143,6 +273,36 @@
                     <Setter Property="Padding" Value="2"/>
                 </Trigger>
             </Style.Triggers>
+        </Style>
+
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="Background"  Value="#7163ba"/>
+            <Setter Property="Height"  Value="50"/>
+            <Setter Property="Width"  Value="50"/>
+            <Setter Property="Foreground"  Value="White"/>
+            <Setter Property="Margin"  Value="0 5"/>
+            <Setter Property="FocusVisualStyle"  Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#5a5080"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="buttonIcon" TargetType="fa:IconImage">
+            <Setter Property="Foreground"  Value="White"/>
+            <Setter Property="Width"  Value="17"/>
+            <Setter Property="Height"  Value="17"/>
         </Style>
     </Application.Resources>
 </Application>

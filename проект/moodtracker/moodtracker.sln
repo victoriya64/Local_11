@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moodtracker", "moodtracker\moodtracker.csproj", "{2004E0C9-4A58-40B6-A668-4BA9CB5CFBE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern_Test", "Command_Test\Pattern_Test.csproj", "{73215AC3-109E-449E-9E2B-44264C581D4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2004E0C9-4A58-40B6-A668-4BA9CB5CFBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2004E0C9-4A58-40B6-A668-4BA9CB5CFBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2004E0C9-4A58-40B6-A668-4BA9CB5CFBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73215AC3-109E-449E-9E2B-44264C581D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73215AC3-109E-449E-9E2B-44264C581D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73215AC3-109E-449E-9E2B-44264C581D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73215AC3-109E-449E-9E2B-44264C581D4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

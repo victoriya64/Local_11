@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Виктория\Documents\GitHub\Local_11\проект\moodtracker\moodtracker\obj\Debug\
+C:\Users\Виктория\Documents\конструирование\проект\moodtracker\moodtracker\obj\Debug\
 moodtracker
 none
 false
 DEBUG;TRACE
-C:\Users\Виктория\Documents\GitHub\Local_11\проект\moodtracker\moodtracker\App.xaml
-4-1985439012
+C:\Users\Виктория\Documents\конструирование\проект\moodtracker\moodtracker\App.xaml
+4-1093232232
 
-12-1406028964
-31-2032810086
-Windows\MainWindow.xaml;Windows\NewDayWindow.xaml;Windows\StatisticWindow.xaml;Windows\WindowBase.xaml;
+18-1610795509
+27930716926
+View\HistoryView.xaml;View\MainView.xaml;View\NotesView.xaml;View\StatisticView.xaml;
 
 False
 
