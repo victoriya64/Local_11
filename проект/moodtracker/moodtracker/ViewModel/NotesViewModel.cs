@@ -33,6 +33,13 @@ namespace moodtracker.ViewModel
             set { _currentDate = value; OnPropertyChanged(); }
         }
 
+        private string _errorMessage;
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set { _errorMessage = value; OnPropertyChanged(); }
+        }
+
         private DateTime _selectedDate = DateTime.Parse(DateTime.Now.ToString("dd.MM.yyyy  HH:mm"));
         public DateTime SelectedDate
         {
@@ -55,7 +62,7 @@ namespace moodtracker.ViewModel
         {
             dao = new Repositories.RepositoryBase();
             MoodCommand = new ViewModelCommand(OnMoodCommandExecute);
-            AcceptCommand = new ViewModelCommand(OnAcceptCommandExecute, CanAcceptCommandExecute);
+            AcceptCommand = new ViewModelCommand(OnAcceptCommandExecute);
         }
 
 
@@ -64,10 +71,6 @@ namespace moodtracker.ViewModel
             selectedMood = int.Parse((string)parameter);
         }
 
-        private bool CanAcceptCommandExecute(object parameter)
-        {
-            return selectedMood != -1;
-        }
         public void Return()
         {
             var mainWindow = Application.Current.MainWindow;
@@ -80,15 +83,23 @@ namespace moodtracker.ViewModel
         }
         private void OnAcceptCommandExecute(object parameter)
         {
-            var day = _dayBuilder
+            if (selectedMood == -1)
+            {
+                ErrorMessage = ("Пожалуйста, выберите настроение:");
+                return;
+            }
+            else
+            {
+                var day = _dayBuilder
             .SetSelectedDate(SelectedDate)
             .SetSelectedMood(selectedMood)
             .SetNote(Note)
             .Build();
 
-            dao.Write(day);
+                dao.Write(day);
 
-            Return();
+                Return();
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ namespace moodtracker.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly MainViewModelFacade _mainViewModelFacade = new MainViewModelFacade();
 
         public readonly HistoryViewModel _historyViewModel;
         public ICommand HistoryCommand { get; }

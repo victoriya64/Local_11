@@ -24,6 +24,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40*"></RowDefinition>
                     <RowDefinition Height="18*"></RowDefinition>
+                    <RowDefinition Height="19*"></RowDefinition>
                     <RowDefinition Height="19*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource titleTextNotes}" Text="КАК ВЫ СЕБЯ ЧУВСТВУЕТЕ?" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,16,0,0"/>
@@ -34,7 +35,6 @@
                 </Grid>
                 <TextBlock Grid.Row="2" Margin="134,9,0,0" Style="{StaticResource titleDataNotes}" Text="{Binding CurrentDate}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             </Grid>
-
             <Grid Margin="15,160,35,240" MinHeight="100">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -43,25 +43,25 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <RadioButton Grid.Column="0" Style="{StaticResource moodButton}" Command="{Binding MoodCommand}" CommandParameter="0">
+                <RadioButton Grid.Row="1" Grid.Column="0" Style="{StaticResource moodButton}" Command="{Binding MoodCommand}" CommandParameter="0">
                     <Image Source="/Image/rad.png" MaxWidth="100"/>
                 </RadioButton>
-                <RadioButton Grid.Column="1" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="1">
+                <RadioButton Grid.Row="1" Grid.Column="1" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="1">
                     <Image Source="/Image/good.png" MaxWidth="100"/>
                 </RadioButton>
-                <RadioButton Grid.Column="2" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="2">
+                <RadioButton Grid.Row="1" Grid.Column="2" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="2">
                     <Image Source="/Image/neutral.png" MaxWidth="100"/>
                 </RadioButton>
-                <RadioButton Grid.Column="3" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="3">
+                <RadioButton Grid.Row="1" Grid.Column="3" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="3">
                     <Image Source="/Image/bad.png" MaxWidth="100"/>
                 </RadioButton>
-                <RadioButton Grid.Column="4" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="4">
+                <RadioButton Grid.Row="1" Grid.Column="4" Style="{StaticResource moodButton}"  Command="{Binding MoodCommand}" CommandParameter="4">
                     <Image Source="/Image/awful.png" MaxWidth="100"/>
                 </RadioButton>
             </Grid>
 
         </Grid>
-
+        <TextBlock Margin="30,180,0,0" Style="{StaticResource errorMessage}" Text="{Binding ErrorMessage}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Grid VerticalAlignment="Bottom" Margin="0 0 0 110">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="41*"/>

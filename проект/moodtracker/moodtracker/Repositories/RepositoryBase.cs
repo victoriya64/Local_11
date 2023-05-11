@@ -57,7 +57,7 @@ namespace moodtracker.Repositories
                     command = new SqlCommand("INSERT INTO [Notes] ([date], [mood], [note]) VALUES (@date, @mood, @note)", connection);
                     command.Parameters.AddWithValue("@date", day.Date);
                     command.Parameters.AddWithValue("@mood", day.Mood);
-                    command.Parameters.AddWithValue("@note", day.Note);
+                    command.Parameters.AddWithValue("@note", (object)day.Note ?? DBNull.Value);
                     command.ExecuteNonQuery();
                 }
                 reader.Close();
@@ -88,7 +88,7 @@ namespace moodtracker.Repositories
                 var command = new SqlCommand();
                 command.Connection = connection;
                 connection.Open();
-                command.CommandText = "SELECT * FROM [Notes]";
+                command.CommandText = "SELECT * FROM [Notes] ORDER BY date DESC";
                 List<Day> notes = new List<Day>();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())

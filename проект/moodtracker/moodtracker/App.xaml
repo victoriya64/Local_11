@@ -210,6 +210,17 @@
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
+        <Style x:Key="errorMessage" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#e95e89"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="18"/>
+            <Setter Property="FontFamily"  Value="Montserrat"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
         <Style x:Key="titleDataNotes" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#594e7f"/>
             <Setter Property="FontSize" Value="20"/>

@@ -135,7 +135,8 @@ namespace moodtracker.ViewModel
                 seriesCollection.Add(series);
             }
             var xAxis = new LiveCharts.Wpf.Axis { Title = "Date", Labels = new List<string>() };
-            var allDates = moodDataPoints.Select(p => p.Date).Distinct().ToList(); // Использование свойства Date для удаления времени из даты
+            var allDates = moodDataPoints.Select(p => p.Date).Distinct().ToList(); // Использование свойства Date для удаления времени из даты                                                                  // Сортировка по убыванию даты
+            allDates.Sort((d1, d2) => -d1.Date.CompareTo(d2.Date));
             allDates.Sort();
             foreach (var date in allDates)
             {

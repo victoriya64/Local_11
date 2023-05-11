@@ -37,7 +37,7 @@ namespace Command_Test
                 {
                     // Arrange
                     RepositoryBase repository = new RepositoryBase();
-                    DateTime testDate = new DateTime(2022, 05, 06, 16, 48, 00);
+                    DateTime testDate = new DateTime(2023, 05, 06, 16, 48, 00);
                     Day testDay = new Day(testDate, 0, "Читала книгу");
 
                     // Act
@@ -56,7 +56,7 @@ namespace Command_Test
                 {
                     // Arrange
                     RepositoryBase repository = new RepositoryBase();
-                    DateTime testDate = new DateTime(2022, 05, 07, 19, 50, 00);
+                    DateTime testDate = new DateTime(2023, 05, 07, 19, 50, 00);
                     Day testDay = new Day(testDate, 4, "Test note");
                     repository.Write(testDay);
 
@@ -80,9 +80,9 @@ namespace Command_Test
                     RepositoryBase repository = new RepositoryBase();
                     DateTime testDate1 = new DateTime(2023, 05, 08, 14, 05, 00);
                     Day testDay1 = new Day(testDate1, 2, "Ходила в магазин");
-                    DateTime testDate2 = new DateTime(2022, 05, 09, 22, 55, 00);
+                    DateTime testDate2 = new DateTime(2023, 05, 09, 22, 55, 00);
                     Day testDay2 = new Day(testDate2, 3, "Опять ошибки в коде");
-                    DateTime testDate3 = new DateTime(2022, 05, 10, 10, 48, 00);
+                    DateTime testDate3 = new DateTime(2023, 05, 10, 10, 48, 00);
                     Day testDay3 = new Day(testDate3, 3, "Делала домашнее задание");
                     repository.Write(testDay1);
                     repository.Write(testDay2);
